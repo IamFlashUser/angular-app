@@ -7,13 +7,14 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         AppComponent,
-        RouterTestingModule],
+        RouterTestingModule
+      ],
     }).compileComponents();
   });
 
-  it(`should have as title 'angular-bootstrap'`, () => {
+  it(`should have as title 'angular-component'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-bootstrap');
+    expect(app.title).toEqual('angular-component');
   });
 });
