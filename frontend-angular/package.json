@@ -1,6 +1,6 @@
 {
   "name": "angular-starter",
-  "version": "20.0.0",
+  "version": "20.0.3",
   "scripts": {
     "ng": "ng",
     "dev": "ng serve --port 4200",
@@ -18,15 +18,15 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "20.0.0",
-    "@angular/compiler": "20.0.0",
-    "@angular/core": "20.0.0",
-    "@angular/forms": "20.0.0",
-    "@angular/platform-browser": "20.0.0",
-    "@angular/platform-server": "20.0.0",
-    "@angular/router": "20.0.0",
-    "@angular/service-worker": "20.0.0",
-    "@angular/ssr": "20.0.0",
+    "@angular/common": "20.0.3",
+    "@angular/compiler": "20.0.3",
+    "@angular/core": "20.0.3",
+    "@angular/forms": "20.0.3",
+    "@angular/platform-browser": "20.0.3",
+    "@angular/platform-server": "20.0.3",
+    "@angular/router": "20.0.3",
+    "@angular/service-worker": "20.0.3",
+    "@angular/ssr": "20.0.2",
     "@fortawesome/fontawesome-free": "6.7.2",
     "bootstrap": "5.3.6",
     "express": "5.1.0",
@@ -35,21 +35,21 @@
     "zone.js": "0.15.1"
   },
   "devDependencies": {
-    "@angular/build": "20.0.0",
-    "@angular/cli": "20.0.0",
-    "@angular/compiler-cli": "20.0.0",
-    "@types/express": "^5.0.1",
+    "@angular/build": "20.0.2",
+    "@angular/cli": "20.0.2",
+    "@angular/compiler-cli": "20.0.3",
+    "@types/express": "5.0.3",
     "@types/jasmine": "5.1.8",
-    "@types/node": "22.15.24",
-    "angular-eslint": "19.6.0",
-    "eslint": "9.27.0",
-    "jasmine-core": "5.7.1",
+    "@types/node": "24.0.1",
+    "angular-eslint": "20.0.0",
+    "eslint": "9.29.0",
+    "jasmine-core": "5.8.0",
     "karma": "6.4.4",
     "karma-chrome-launcher": "3.2.0",
     "karma-coverage": "2.2.1",
     "karma-jasmine": "5.1.0",
     "karma-jasmine-html-reporter": "2.1.0",
     "typescript": "5.8.3",
-    "typescript-eslint": "8.33.0"
+    "typescript-eslint": "8.34.0"
   }
 }
