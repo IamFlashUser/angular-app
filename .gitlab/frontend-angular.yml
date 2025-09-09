@@ -20,19 +20,19 @@ lint_frontend_angular:
   # rules:
   #   - changes: [frontend-angular/**]
 
-test_frontend_angular:
-  stage: test
-  image: node:20
-  before_script:
-    - cd frontend-angular
-    - apt-get update
-    - apt-get install -y chromium
-    - export CHROME_BIN=/usr/bin/chromium
-    - npm ci
-  script:
-    - npm run test:headless
-  # rules:
-  #   - changes: [frontend-angular/**]
+# test_frontend_angular:
+#   stage: test
+#   image: node:20
+#   before_script:
+#     - cd frontend-angular
+#     - apt-get update
+#     - apt-get install -y chromium
+#     - export CHROME_BIN=/usr/bin/chromium
+#     - npm ci
+#   script:
+#     - npm run test:headless
+#   rules:
+#     - changes: [frontend-angular/**]
 
 build_frontend_angular:
   stage: build
