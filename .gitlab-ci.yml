@@ -3,16 +3,13 @@ stages:
   - lint
   - test
   - build
-  - container
 
 variables:
   WORKDIR: frontend-angular
   NODE_VERSION: "20"
-  IMAGE_NAME: $DOCKER_USERNAME/frontend-angular
-  CI_PROJ_CACHE_KEY: "node-${CI_COMMIT_REF_SLUG}"
 
 cache:
-  key: "${CI_PROJ_CACHE_KEY}"
+  key: "node-${CI_COMMIT_REF_SLUG}"
   paths:
     - ${WORKDIR}/node_modules
 
@@ -20,14 +17,13 @@ cache:
   image: node:${NODE_VERSION}
   before_script:
     - cd ${WORKDIR}
-    - node -v
     - npm ci
 
 install:
   stage: install
   extends: .install_base
   script:
-    - echo "ok"
+    - node -v
 
 lint:
   stage: lint
@@ -40,8 +36,7 @@ test:
   image: node:${NODE_VERSION}
   before_script:
     - cd ${WORKDIR}
-    - apt-get update
-    - apt-get install -y chromium
+    - apt-get update && apt-get install -y chromium
     - export CHROME_BIN=/usr/bin/chromium
     - npm ci
   script:
@@ -52,8 +47,6 @@ test:
       junit: ${WORKDIR}/junit.xml
     paths:
       - ${WORKDIR}/coverage
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "merge_request_event"
 
 build:
   stage: build
@@ -64,26 +57,3 @@ build:
     paths:
       - ${WORKDIR}/dist
     expire_in: 7 days
-
-docker:
-  stage: container
-  image: docker:27
-  services:
-    - docker:27-dind
-  variables:
-    DOCKER_HOST: tcp://docker:2375
-    DOCKER_TLS_CERTDIR: ""
-  before_script:
-    - cd ${WORKDIR}
-    - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-  script:
-    - docker build -t "$IMAGE_NAME:$CI_COMMIT_SHORT_SHA" -f Dockerfile .
-    - docker push "$IMAGE_NAME:$CI_COMMIT_SHORT_SHA"
-    - |
-      if [ "$CI_COMMIT_BRANCH" = "$CI_DEFAULT_BRANCH" ]; then
-        docker tag "$IMAGE_NAME:$CI_COMMIT_SHORT_SHA" "$IMAGE_NAME:latest"
-        docker push "$IMAGE_NAME:latest"
-      fi
-  needs: ["build"]
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "push"
