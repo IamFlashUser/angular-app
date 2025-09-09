@@ -1,62 +1,68 @@
-stages:
-  - install
-  - test
-  - build
+stages: [install, lint, test, build]
+include:
+  - local: .gitlab/frontend-angular.yml
+  - local: .gitlab/backend-springboot.yml
 
-variables:
-  WORKDIR: backend-springboot
-  JAVA_IMAGE: maven:3.9-eclipse-temurin-21
 
-cache:
-  key: "m2-${CI_COMMIT_REF_SLUG}"
-  paths:
-    - .m2/repository
+# stages:
+#   - install
+#   - test
+#   - build
 
-install_backend_springboot:
-  stage: install
-  image: ${JAVA_IMAGE}
-  before_script:
-    - cd ${WORKDIR}
-  script:
-    - mvn -B -DskipTests verify
-  rules:
-    - changes:
-        - ${WORKDIR}/**
+# variables:
+#   WORKDIR: backend-springboot
+#   JAVA_IMAGE: maven:3.9-eclipse-temurin-21
 
-test_backend_springboot:
-  stage: test
-  image: ${JAVA_IMAGE}
-  before_script:
-    - cd ${WORKDIR}
-  script:
-    - mvn -B clean test jacoco:report
-  artifacts:
-    when: always
-    reports:
-      junit: ${WORKDIR}/target/surefire-reports/*.xml
-    paths:
-      - ${WORKDIR}/target/site/jacoco
-  needs: ["install_backend_springboot"]
-  rules:
-    - changes:
-        - ${WORKDIR}/**
+# cache:
+#   key: "m2-${CI_COMMIT_REF_SLUG}"
+#   paths:
+#     - .m2/repository
 
-build_backend_springboot:
-  stage: build
-  image: ${JAVA_IMAGE}
-  before_script:
-    - cd ${WORKDIR}
-  script:
-    - mvn -B -DskipTests package
-  artifacts:
-    paths:
-      - ${WORKDIR}/target/*.jar
-      - ${WORKDIR}/target/*.war
-    expire_in: 7 days
-  needs: ["test_backend_springboot"]
-  rules:
-    - changes:
-        - ${WORKDIR}/**
+# install_backend_springboot:
+#   stage: install
+#   image: ${JAVA_IMAGE}
+#   before_script:
+#     - cd ${WORKDIR}
+#   script:
+#     - mvn -B -DskipTests verify
+#   rules:
+#     - changes:
+#         - ${WORKDIR}/**
+
+# test_backend_springboot:
+#   stage: test
+#   image: ${JAVA_IMAGE}
+#   before_script:
+#     - cd ${WORKDIR}
+#   script:
+#     - mvn -B clean test jacoco:report
+#   artifacts:
+#     when: always
+#     reports:
+#       junit: ${WORKDIR}/target/surefire-reports/*.xml
+#     paths:
+#       - ${WORKDIR}/target/site/jacoco
+#   needs: ["install_backend_springboot"]
+#   rules:
+#     - changes:
+#         - ${WORKDIR}/**
+
+# build_backend_springboot:
+#   stage: build
+#   image: ${JAVA_IMAGE}
+#   before_script:
+#     - cd ${WORKDIR}
+#   script:
+#     - mvn -B -DskipTests package
+#   artifacts:
+#     paths:
+#       - ${WORKDIR}/target/*.jar
+#       - ${WORKDIR}/target/*.war
+#     expire_in: 7 days
+#   needs: ["test_backend_springboot"]
+#   rules:
+#     - changes:
+#         - ${WORKDIR}/**
 
 
 

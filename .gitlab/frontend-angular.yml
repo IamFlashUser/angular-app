@@ -1,0 +1,50 @@
+install_frontend:
+  stage: install
+  image: node:20
+  before_script:
+    - cd frontend-angular
+    - npm ci
+  script:
+    - node -v
+  rules:
+    - changes: [frontend-angular/**]
+
+lint_frontend:
+  stage: lint
+  image: node:20
+  before_script:
+    - cd frontend-angular
+    - npm ci
+  script:
+    - npm run lint
+  rules:
+    - changes: [frontend-angular/**]
+
+test_frontend:
+  stage: test
+  image: node:20
+  before_script:
+    - cd frontend-angular
+    - apt-get update
+    - apt-get install -y chromium
+    - export CHROME_BIN=/usr/bin/chromium
+    - npm ci
+  script:
+    - npm run test:headless
+  rules:
+    - changes: [frontend-angular/**]
+
+build_frontend:
+  stage: build
+  image: node:20
+  before_script:
+    - cd frontend-angular
+    - npm ci
+  script:
+    - npm run build -- --configuration=production
+  artifacts:
+    paths:
+      - frontend-angular/dist
+    expire_in: 7 days
+  rules:
+    - changes: [frontend-angular/**]
