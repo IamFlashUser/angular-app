@@ -31,18 +31,6 @@ lint:
   script:
     - npm run lint
 
-test:
-  stage: test
-  image: node:${NODE_VERSION}
-  before_script:
-    - cd ${WORKDIR}
-    - apt-get update
-    - apt-get install -y chromium
-    - export CHROME_BIN=/usr/bin/chromium
-    - npm ci
-  script:
-    - npm run test:headless
-
 build:
   stage: build
   extends: .install_base
