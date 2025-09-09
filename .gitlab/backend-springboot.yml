@@ -36,5 +36,5 @@ build_backend_springboot:
       - backend-springboot/target/*.jar
       - backend-springboot/target/*.war
     expire_in: 7 days
-  rules:
-    - changes: [backend-springboot/**]
+  # rules:
+  #   - changes: [backend-springboot/**]

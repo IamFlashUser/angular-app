@@ -46,5 +46,5 @@ build_frontend:
     paths:
       - frontend-angular/dist
     expire_in: 7 days
-  rules:
-    - changes: [frontend-angular/**]
+  # rules:
+  #   - changes: [frontend-angular/**]
