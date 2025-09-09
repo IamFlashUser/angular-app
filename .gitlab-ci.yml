@@ -40,13 +40,7 @@ test:
     - export CHROME_BIN=/usr/bin/chromium
     - npm ci
   script:
-    - npm run test -- --watch=false --browsers=ChromeHeadless --code-coverage
-  artifacts:
-    when: always
-    reports:
-      junit: ${WORKDIR}/junit.xml
-    paths:
-      - ${WORKDIR}/coverage
+    - npm run test:headless
 
 build:
   stage: build
