@@ -3,7 +3,6 @@ include:
   - local: .gitlab/frontend-angular.yml
   - local: .gitlab/backend-springboot.yml
 
-
 # stages:
 #   - install
 #   - test
