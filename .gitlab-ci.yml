@@ -1,42 +1,104 @@
 stages:
   - install
-  - lint
   - test
   - build
 
 variables:
-  WORKDIR: frontend-angular
-  NODE_VERSION: "20"
+  WORKDIR: backend-springboot
+  JAVA_IMAGE: maven:3.9-eclipse-temurin-21
 
 cache:
-  key: "node-${CI_COMMIT_REF_SLUG}"
+  key: "m2-${CI_COMMIT_REF_SLUG}"
   paths:
-    - ${WORKDIR}/node_modules
+    - .m2/repository
 
-.install_base:
-  image: node:${NODE_VERSION}
+install_backend_springboot:
+  stage: install
+  image: ${JAVA_IMAGE}
   before_script:
     - cd ${WORKDIR}
-    - npm ci
-
-install:
-  stage: install
-  extends: .install_base
   script:
-    - node -v
+    - mvn -B -DskipTests verify
+  rules:
+    - changes:
+        - ${WORKDIR}/**
 
-lint:
-  stage: lint
-  extends: .install_base
+test_backend_springboot:
+  stage: test
+  image: ${JAVA_IMAGE}
+  before_script:
+    - cd ${WORKDIR}
   script:
-    - npm run lint
+    - mvn -B clean test jacoco:report
+  artifacts:
+    when: always
+    reports:
+      junit: ${WORKDIR}/target/surefire-reports/*.xml
+    paths:
+      - ${WORKDIR}/target/site/jacoco
+  needs: ["install_backend_springboot"]
+  rules:
+    - changes:
+        - ${WORKDIR}/**
 
-build:
+build_backend_springboot:
   stage: build
-  extends: .install_base
+  image: ${JAVA_IMAGE}
+  before_script:
+    - cd ${WORKDIR}
   script:
-    - npm run build -- --configuration=production
+    - mvn -B -DskipTests package
   artifacts:
     paths:
-      - ${WORKDIR}/dist
+      - ${WORKDIR}/target/*.jar
+      - ${WORKDIR}/target/*.war
     expire_in: 7 days
+  needs: ["test_backend_springboot"]
+  rules:
+    - changes:
+        - ${WORKDIR}/**
+
+
+
+# stages:
+#   - install
+#   - lint
+#   - test
+#   - build
+
+# variables:
+#   WORKDIR: frontend-angular
+#   NODE_VERSION: "20"
+
+# cache:
+#   key: "node-${CI_COMMIT_REF_SLUG}"
+#   paths:
+#     - ${WORKDIR}/node_modules
+
+# .install_base:
+#   image: node:${NODE_VERSION}
+#   before_script:
+#     - cd ${WORKDIR}
+#     - npm ci
+
+# install:
+#   stage: install
+#   extends: .install_base
+#   script:
+#     - node -v
+
+# lint:
+#   stage: lint
+#   extends: .install_base
+#   script:
+#     - npm run lint
+
+# build:
+#   stage: build
+#   extends: .install_base
+#   script:
+#     - npm run build -- --configuration=production
+#   artifacts:
+#     paths:
+#       - ${WORKDIR}/dist
+#     expire_in: 7 days
