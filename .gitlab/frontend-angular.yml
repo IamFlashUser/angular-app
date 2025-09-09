@@ -1,4 +1,4 @@
-install_frontend:
+install_frontend_angular:
   stage: install
   image: node:20
   before_script:
@@ -9,7 +9,7 @@ install_frontend:
   # rules:
   #   - changes: [frontend-angular/**]
 
-lint_frontend:
+lint_frontend_angular:
   stage: lint
   image: node:20
   before_script:
@@ -20,7 +20,7 @@ lint_frontend:
   # rules:
   #   - changes: [frontend-angular/**]
 
-test_frontend:
+test_frontend_angular:
   stage: test
   image: node:20
   before_script:
@@ -34,7 +34,7 @@ test_frontend:
   # rules:
   #   - changes: [frontend-angular/**]
 
-build_frontend:
+build_frontend_angular:
   stage: build
   image: node:20
   before_script:
