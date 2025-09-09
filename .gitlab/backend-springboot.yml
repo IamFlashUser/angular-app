@@ -5,8 +5,8 @@ install_backend_springboot:
     - cd backend-springboot
   script:
     - mvn -B -DskipTests verify
-  rules:
-    - changes: [backend-springboot/**]
+  # rules:
+  #   - changes: [backend-springboot/**]
 
 test_backend_springboot:
   stage: test
@@ -21,8 +21,8 @@ test_backend_springboot:
       junit: backend-springboot/target/surefire-reports/*.xml
     paths:
       - backend-springboot/target/site/jacoco
-  rules:
-    - changes: [backend-springboot/**]
+  # rules:
+  #   - changes: [backend-springboot/**]
 
 build_backend_springboot:
   stage: build

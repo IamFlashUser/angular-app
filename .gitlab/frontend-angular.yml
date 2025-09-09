@@ -6,8 +6,8 @@ install_frontend:
     - npm ci
   script:
     - node -v
-  rules:
-    - changes: [frontend-angular/**]
+  # rules:
+  #   - changes: [frontend-angular/**]
 
 lint_frontend:
   stage: lint
@@ -17,8 +17,8 @@ lint_frontend:
     - npm ci
   script:
     - npm run lint
-  rules:
-    - changes: [frontend-angular/**]
+  # rules:
+  #   - changes: [frontend-angular/**]
 
 test_frontend:
   stage: test
@@ -31,8 +31,8 @@ test_frontend:
     - npm ci
   script:
     - npm run test:headless
-  rules:
-    - changes: [frontend-angular/**]
+  # rules:
+  #   - changes: [frontend-angular/**]
 
 build_frontend:
   stage: build
