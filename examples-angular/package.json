@@ -11,6 +11,10 @@
     "lint-component": "nx lint angular-component",
     "test-component": "nx test angular-component",
     "build-component": "nx build angular-component",
+    "start-ngrx": "nx serve angular-ngrx",
+    "lint-ngrx": "nx lint angular-ngrx",
+    "test-ngrx": "nx test angular-ngrx",
+    "build-ngrx": "nx build angular-ngrx",
     "start-rxjs": "nx serve angular-rxjs",
     "lint-rxjs": "nx lint angular-rxjs",
     "test-rxjs": "nx test angular-rxjs",
@@ -33,6 +37,7 @@
     "@angular/platform-browser": "20.2.4",
     "@angular/platform-browser-dynamic": "20.2.4",
     "@angular/router": "20.2.4",
+    "@ngrx/store": "20.0.1",
     "rxjs": "7.8.2",
     "zone.js": "0.15.1"
   },
