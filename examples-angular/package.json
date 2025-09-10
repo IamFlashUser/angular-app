@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "start-behavior-subject": "nx serve angular-behavior-subject",
+    "lint-behavior-subject": "nx lint angular-behavior-subject",
+    "test-behavior-subject": "nx test angular-behavior-subject",
+    "build-behavior-subject": "nx build angular-behavior-subject",
     "start-component": "nx serve angular-component",
     "lint-component": "nx lint angular-component",
     "test-component": "nx test angular-component",
