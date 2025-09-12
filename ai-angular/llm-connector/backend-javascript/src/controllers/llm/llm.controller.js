@@ -3,6 +3,9 @@ import claudeMock from '../../mocks/llm/claude.mock.js';
 import chatgptService from '../../services/llm/chatgpt.service.js';
 import claudeService from '../../services/llm/claude.service.js';
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 const useMock = process.env.USE_MOCK === 'true';
 
 function isUnauthorizedError(message) {
