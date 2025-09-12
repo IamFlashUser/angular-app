@@ -16,10 +16,10 @@ function getBaseUrl(): string {
 
   switch (backend) {
     case 'java':
-      return 'http://localhost:8080/backend-java/api';
+      return 'http://localhost:3002/api';
     case 'node':
     default:
-      return 'http://localhost:3000/api';
+      return 'http://localhost:3001/api';
   }
 }
 
@@ -37,7 +37,6 @@ export class AiService {
     }
 
     const url = `${this.baseUrl}/llm/${type}/${llm}`;
-    console.log('00000000001:' + url)
     const body = { name, length, style };
 
     return this.http.post<ContentGenerationResponse>(url, body)

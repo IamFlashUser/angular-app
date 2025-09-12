@@ -25,7 +25,7 @@ public class ClaudeMock {
         }
 
         return String.format(
-            "Java Mock Backend - Demande envoyée à %s pour une %s de \"%s\", avec un style \"%s\" et une longueur \"%s\".",
+            "Java Mock Backend SpringBoot - Demande envoyée à %s pour une %s de \"%s\", avec un style \"%s\" et une longueur \"%s\".",
             llm, validType, name, style, length
         );
     }
