@@ -2,8 +2,6 @@
 
 Application Spring Boot packagée en WAR, compatible Tomcat / Jetty, avec linter, tests, build Maven.
 
-Update : 050909-1057
-
 ---
 
 ## 📊 Updates (Dependency Updates)
