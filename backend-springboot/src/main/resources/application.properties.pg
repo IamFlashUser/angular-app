@@ -7,7 +7,7 @@ db.client=sql
 
 # === Application ===
 spring.application.name=backend-springboot
-server.port=8080
+server.port=3003
 
 # === PostgreSQL Configuration ===
 spring.datasource.url=jdbc:postgresql://localhost:5432/backend_javascript
@@ -18,3 +18,8 @@ spring.datasource.driver-class-name=org.postgresql.Driver
 # === Hibernate / JPA ===
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+
+# === prometheus ===
+management.endpoints.web.exposure.include=prometheus
+management.endpoint.prometheus.enabled=true
+management.endpoints.web.base-path=/
