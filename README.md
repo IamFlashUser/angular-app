@@ -18,7 +18,7 @@
 | **Frontend**           | Angular 20 — SPA avec Routing, SSR, PWA, SEO                  |
 | **Backend Javascript**         | Node.js 22 + Express — API REST avec données mockées ou BDD   |
 | **Backend TypeScript** | Node.js 22 + TypeScript — API typée avec données ou BDD       |
-| **Backend Java**                  | Java 21 + Spring Boot — API REST simple et moderne            |
+| **Backend Spring Boot**           | Java 21 + Spring Boot — API REST simple et moderne            |
 
 ---
 
@@ -39,7 +39,7 @@
 |------------------------------|---------------|
 | Backend JavaScript           | [![Docker Image Version - Backend JavaScript](https://img.shields.io/docker/v/ganatan/backend-javascript?label=Backend%20JavaScript%20Docker&logo=docker&sort=semver)](https://hub.docker.com/r/ganatan/backend-javascript) |
 | Backend TypeScript           | [![Docker Image Version - Backend TypeScript](https://img.shields.io/docker/v/ganatan/backend-typescript?label=Backend%20TypeScript%20Docker&logo=docker&sort=semver)](https://hub.docker.com/r/ganatan/backend-typescript) |
-| Backend Spring Boot          | [![Docker Image Version - Backend Java](https://img.shields.io/docker/v/ganatan/backend-springboot?label=Backend%20Java%20Docker&logo=docker&sort=semver)](https://hub.docker.com/r/ganatan/backend-springboot) |
+| Backend Spring Boot          | [![Docker Image Version - Backend Spring Boot](https://img.shields.io/docker/v/ganatan/backend-springboot?label=Backend%20Java%20Docker&logo=docker&sort=semver)](https://hub.docker.com/r/ganatan/backend-springboot) |
 | Frontend Angular             | [![Docker Image Version - Frontend Angular](https://img.shields.io/docker/v/ganatan/frontend-angular?label=Frontend%20Angular%20Docker&logo=docker&sort=semver)](https://hub.docker.com/r/ganatan/frontend-angular) |
 
 ---
