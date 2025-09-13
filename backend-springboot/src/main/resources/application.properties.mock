@@ -7,7 +7,7 @@ db.client=mock
 
 # === Application ===
 spring.application.name=backend-springboot
-server.port=3003
+server.port=3000
 
 # === prometheus ===
 management.endpoints.web.exposure.include=prometheus
