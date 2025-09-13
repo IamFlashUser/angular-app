@@ -1,8 +1,5 @@
 package com.angular.ai.controller;
 
-import com.angular.ai.controller.RootController;
-import com.angular.ai.config.AiServicesConfig;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
