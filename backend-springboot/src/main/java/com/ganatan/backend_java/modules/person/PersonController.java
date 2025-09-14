@@ -3,9 +3,6 @@ package com.ganatan.backend_java.modules.person;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import com.ganatan.backend_java.modules.person.AlreadyExistsException;
-import com.ganatan.backend_java.modules.person.NotFoundException;
-
 import java.util.List;
 
 @RestController

@@ -8,6 +8,6 @@ export const environment = {
   },
   urlNews: './assets/params/json/mock/trailers.json',
   urlMovies: './assets/params/json/mock/movies.json',
-  useMock: false,
+  useMock: true,
   backend: 'http://localhost:3000',
 };

@@ -2,9 +2,6 @@ package com.ganatan.backend_java.modules.person;
 
 import org.springframework.stereotype.Service;
 
-import com.ganatan.backend_java.modules.person.AlreadyExistsException;
-import com.ganatan.backend_java.modules.person.NotFoundException;
-
 import java.util.List;
 
 @Service
