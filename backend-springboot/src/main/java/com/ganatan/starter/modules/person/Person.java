@@ -1,21 +1,21 @@
-package com.ganatan.backend_java.modules.continent;
+package com.ganatan.starter.modules.person;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "continent")
-public class Continent {
+@Table(name = "person")
+public class Person {
 
 	@Id
 	private Long id;
 	private String name;
 
-	public Continent() {
+	public Person() {
 	}
 
-	public Continent(Long id, String name) {
+	public Person(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}

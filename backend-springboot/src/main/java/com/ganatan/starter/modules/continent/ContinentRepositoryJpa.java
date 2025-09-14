@@ -1,4 +1,4 @@
-package com.ganatan.backend_java.modules.continent;
+package com.ganatan.starter.modules.continent;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.data.jpa.repository.JpaRepository;

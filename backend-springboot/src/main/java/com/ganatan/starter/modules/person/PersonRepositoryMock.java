@@ -1,4 +1,4 @@
-package com.ganatan.backend_java.modules.person;
+package com.ganatan.starter.modules.person;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

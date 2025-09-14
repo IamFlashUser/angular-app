@@ -1,4 +1,4 @@
-package com.ganatan.backend_java.controllers;
+package com.ganatan.starter.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

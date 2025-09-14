@@ -1,4 +1,4 @@
-package com.ganatan.backend_java.modules.continent;
+package com.ganatan.starter.modules.continent;
 
 import java.util.List;
 

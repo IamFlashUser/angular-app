@@ -1,4 +1,4 @@
-package com.ganatan.backend_java.config;
+package com.ganatan.starter.config;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

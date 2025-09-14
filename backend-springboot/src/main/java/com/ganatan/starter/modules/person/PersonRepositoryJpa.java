@@ -1,4 +1,4 @@
-package com.ganatan.backend_java.modules.person;
+package com.ganatan.starter.modules.person;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.data.jpa.repository.JpaRepository;

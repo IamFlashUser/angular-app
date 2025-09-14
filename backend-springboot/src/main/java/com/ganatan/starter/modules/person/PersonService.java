@@ -1,4 +1,4 @@
-package com.ganatan.backend_java.modules.person;
+package com.ganatan.starter.modules.person;
 
 import org.springframework.stereotype.Service;
 
