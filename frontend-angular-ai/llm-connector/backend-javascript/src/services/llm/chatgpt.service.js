@@ -53,7 +53,7 @@ async function reply(type, input) {
         },
       },
     );
-
+    console.log('00000000001:' + JSON.stringify(response.data));
     return response.data.choices[0].message.content.trim();
 
   } catch (error) {
