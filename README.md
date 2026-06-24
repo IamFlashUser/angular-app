@@ -2,8 +2,6 @@
 
 Angular 22 starter application with multiple backend implementations.
 
-**👉 Looking for the English version?** : [English](./README.en.md)
-
 ---
 
 ## Stack
