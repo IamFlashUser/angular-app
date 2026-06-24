@@ -236,7 +236,7 @@ mvn clean package
 
 ## Author
 
-Danny Collodet
+Danny
 
 🌐 https://www.ganatan.com
 
