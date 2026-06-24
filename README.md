@@ -234,26 +234,6 @@ mvn clean package
 
 ---
 
-## Docker
-
-### Frontend
-
-```bash
-docker pull ganatan/frontend-angular
-
-docker run -d -p 4200:4200 ganatan/frontend-angular
-```
-
-### Backend Node
-
-```bash
-docker pull ganatan/backend-node
-
-docker run -d -p 8080:8080 ganatan/backend-node
-```
-
----
-
 ## Author
 
 Danny Collodet
