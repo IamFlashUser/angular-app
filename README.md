@@ -62,7 +62,9 @@ http://localhost:4200
 
 Step-by-step tutorials are available on Ganatan:
 
-https://www.ganatan.com/en/tutorials
+🇫🇷 https://www.ganatan.com/tutorials
+
+🇬🇧 https://www.ganatan.com/en/tutorials
 
 ---
 
@@ -242,8 +244,3 @@ Danny
 
 ---
 
-## Documentation
-
-🇫🇷 https://www.ganatan.com/tutorials
-
-🇬🇧 https://www.ganatan.com/en/tutorials
