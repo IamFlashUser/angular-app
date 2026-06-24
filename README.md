@@ -120,7 +120,7 @@ GET /professions
 
 ```bash
 git clone https://github.com/ganatan/angular-node-java.git
-cd angular-node-java-ai
+cd angular-node-java
 ```
 
 ### Frontend
