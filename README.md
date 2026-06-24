@@ -11,8 +11,7 @@ Angular 22 starter application with multiple backend implementations.
 | Project | Technology |
 |----------|------------|
 | frontend-angular | Angular 20 |
-| backend-javascript | Node.js + Express |
-| backend-typescript | Node.js + TypeScript |
+| backend-node       | Node.js + TypeScript |
 | backend-springboot | Java + Spring Boot |
 
 ---
@@ -22,9 +21,7 @@ Angular 22 starter application with multiple backend implementations.
 ```text
 frontend-angular
         |
-        +-- backend-javascript
-        |
-        +-- backend-typescript
+        +-- backend-node
         |
         +-- backend-springboot
 ```
@@ -47,8 +44,7 @@ frontend-angular
 
 ```text
 frontend-angular/
-backend-javascript/
-backend-typescript/
+backend-node/
 backend-springboot/
 ```
 
@@ -130,20 +126,11 @@ npm start
 
 http://localhost:4200
 
-### Backend JavaScript
+
+### Backend Node
 
 ```bash
-cd backend-javascript
-npm install
-npm start
-```
-
-http://localhost:3000
-
-### Backend TypeScript
-
-```bash
-cd backend-typescript
+cd backend-node
 npm install
 npm start
 ```
@@ -170,18 +157,11 @@ docker pull ganatan/frontend-angular
 docker run -d -p 4200:4200 ganatan/frontend-angular
 ```
 
-### Backend JavaScript
+### Backend Node
 
 ```bash
-docker pull ganatan/backend-javascript
-docker run -d -p 8080:8080 ganatan/backend-javascript
-```
-
-### Backend TypeScript
-
-```bash
-docker pull ganatan/backend-typescript
-docker run -d -p 8080:8080 ganatan/backend-typescript
+docker pull ganatan/backend-node
+docker run -d -p 8080:8080 ganatan/backend-node
 ```
 
 ---

@@ -2,7 +2,7 @@
 
 Angular 20 starter application with multiple backend implementations.
 
-**👉 Version française:** [Français](./README.md)
+**👉 Looking for the French version?** : [Français](./README.md)
 
 ---
 
@@ -11,8 +11,7 @@ Angular 20 starter application with multiple backend implementations.
 | Project | Technology |
 |----------|------------|
 | frontend-angular | Angular 20 |
-| backend-javascript | Node.js + Express |
-| backend-typescript | Node.js + TypeScript |
+| backend-node | Node.js + TypeScript |
 | backend-springboot | Java + Spring Boot |
 
 ---
@@ -22,9 +21,7 @@ Angular 20 starter application with multiple backend implementations.
 ```text
 frontend-angular
         |
-        +-- backend-javascript
-        |
-        +-- backend-typescript
+        +-- backend-node
         |
         +-- backend-springboot
 ```
@@ -47,8 +44,7 @@ frontend-angular
 
 ```text
 frontend-angular/
-backend-javascript/
-backend-typescript/
+backend-node/
 backend-springboot/
 ```
 
@@ -71,8 +67,8 @@ backend: 'http://localhost:3000',
 
 | Value | Description |
 |---------|-------------|
-| false | Use frontend mock data |
-| true | Use backend API |
+| false | Frontend mock data |
+| true | Backend API |
 
 ---
 
@@ -113,7 +109,7 @@ GET /professions
 
 ## Quick Start
 
-### Clone the repository
+### Clone
 
 ```bash
 git clone https://github.com/ganatan/angular-node-java.git
@@ -130,27 +126,17 @@ npm start
 
 http://localhost:4200
 
-### JavaScript Backend
+### Backend Node
 
 ```bash
-cd backend-javascript
+cd backend-node
 npm install
 npm start
 ```
 
 http://localhost:3000
 
-### TypeScript Backend
-
-```bash
-cd backend-typescript
-npm install
-npm start
-```
-
-http://localhost:3000
-
-### Spring Boot Backend
+### Backend Spring Boot
 
 ```bash
 cd backend-springboot
@@ -170,18 +156,11 @@ docker pull ganatan/frontend-angular
 docker run -d -p 4200:4200 ganatan/frontend-angular
 ```
 
-### JavaScript Backend
+### Backend Node
 
 ```bash
-docker pull ganatan/backend-javascript
-docker run -d -p 8080:8080 ganatan/backend-javascript
-```
-
-### TypeScript Backend
-
-```bash
-docker pull ganatan/backend-typescript
-docker run -d -p 8080:8080 ganatan/backend-typescript
+docker pull ganatan/backend-node
+docker run -d -p 8080:8080 ganatan/backend-node
 ```
 
 ---
