@@ -1,7 +1,5 @@
 # Angular 20 Fullstack Starter
 
-<img src="./ui/ganatan-about-github.png" align="right" width="140" height="140" alt="Ganatan">
-
 Angular 20 starter application with multiple backend implementations.
 
 **👉 Version française:** [Français](./README.md)
