@@ -1,176 +1,204 @@
-# Application Fullstack : Angular 20, Node.js et Java 21
+# Angular 22 Fullstack Starter
 
-<img src="./ui/ganatan-about-github.png" align="right" width="140" height="140" alt="logo ganatan">
+<img src="./ui/ganatan-about-github.png" align="right" width="140" height="140" alt="Ganatan">
 
-## 🚀 Objectifs du projet
----
+Angular 22 starter application with multiple backend implementations.
 
-**👉 Looking for the English version?** : [![English](./ui/version-en.png)](./README.en.md)
-
----
-
-| Composant              | Description                                                   |
-|------------------------|---------------------------------------------------------------|
-| **Frontend**           | Angular 20 — SPA avec Routing, SSR, PWA, SEO                  |
-| **Backend Javascript**         | Node.js 22 + Express — API REST avec données mockées ou BDD   |
-| **Backend TypeScript** | Node.js 22 + TypeScript — API typée avec données ou BDD       |
-| **Backend Spring Boot**           | Java 21 + Spring Boot — API REST simple et moderne            |
+**👉 Looking for the English version?** : [English](./README.en.md)
 
 ---
+
+## Stack
+
+| Project | Technology |
+|----------|------------|
+| frontend-angular | Angular 22 |
+| backend-javascript | Node.js 22 + Express |
+| backend-typescript | Node.js 22 + TypeScript |
+| backend-springboot | Java 21 + Spring Boot |
+
 ---
 
-## 🌐 Démo en ligne
+## Architecture
 
-🔗 [Voir la démo Angular](https://angular.ganatan.com)
+```text
+frontend-angular
+        |
+        +-- backend-javascript
+        |
+        +-- backend-typescript
+        |
+        +-- backend-springboot
+```
+
+---
+
+## Demo
+
+🔗 https://angular.ganatan.com
 
 <p align="center">
-  <a href="https://angular.ganatan.com/">
-    <img src="https://media.giphy.com/media/9BuBBLc7keCgRojp92/giphy.gif" alt="Angular 20 Example Application"/>
+  <a href="https://angular.ganatan.com">
+    <img src="https://media.giphy.com/media/9BuBBLc7keCgRojp92/giphy.gif" alt="Angular Demo">
   </a>
 </p>
 
 ---
 
-## 📁 Structure du projet
+## Project Structure
 
-### 🧩 Frontend
-
-- **`frontend-angular`**  
-  Application Angular 19 (Incluant Routing, Lazy loading, SSR, PWA, SEO)
-
-### 🚀 Backends
-
-- **`backend-javascript`**  
-  API Express.js en JavaScript avec PostgreSQL, MySQL ou données mockées
-
-- **`backend-typescript`**  
-  API Express.js en TypeScript avec PostgreSQL, MySQL ou données mockées
+```text
+frontend-angular/
+backend-javascript/
+backend-typescript/
+backend-springboot/
+ui/
+```
 
 ---
 
-## 🔧 Configuration du frontend (Angular)
+## Frontend Configuration
 
-Dans `frontend-angular/src/environments/environment.ts` :
+File:
+
+```text
+frontend-angular/src/environments/environment.ts
+```
+
+Example:
 
 ```ts
 useDatabase: false,
 backend: 'http://localhost:3000',
 ```
 
-| `useDatabase` | Mode                                  |
-|---------------|---------------------------------------|
-| `false`       | Données **mockées** côté frontend     |
-| `true`        | Données **réelles** via le backend    |
+| Value | Description |
+|---------|-------------|
+| false | Frontend mock data |
+| true | Backend API |
 
 ---
 
-## 🛠 Configuration des backends
+## Backend Configuration
 
-Dans le fichier `.env` :
+File:
+
+```text
+.env
+```
+
+Example:
 
 ```env
 PORT=3000
-DB_CLIENT=mock # mock | pg | mysql
+DB_CLIENT=mock
 ```
 
-| `DB_CLIENT` | Source de données      |
-|-------------|------------------------|
-| `mock`      | Données simulées       |
-| `pg`        | PostgreSQL             |
-| `mysql`     | MySQL                  |
+| Value | Description |
+|---------|-------------|
+| mock | Mock data |
+| pg | PostgreSQL |
+| mysql | MySQL |
 
 ---
 
-## 🔗 APIs exposées
+## Available APIs
 
-| Ressource     | URL                                     |
-|---------------|------------------------------------------|
-| Continents    | [http://localhost:3000/continents](http://localhost:3000/continents) |
-| Cities        | [http://localhost:3000/cities](http://localhost:3000/cities)         |
-| Countries     | [http://localhost:3000/countries](http://localhost:3000/countries)   |
-| Persons       | [http://localhost:3000/persons](http://localhost:3000/persons)       |
-| Professions   | [http://localhost:3000/professions](http://localhost:3000/professions) |
+```text
+GET /continents
+GET /countries
+GET /cities
+GET /persons
+GET /professions
+```
 
 ---
 
-## ⚙️ Démarrage rapide
+## Quick Start
 
-### ▶️ Cloner le projet
+### Clone
 
 ```bash
-git clone https://github.com/ganatan/angular-app.git
-cd angular-app
+git clone https://github.com/ganatan/angular-node-java.git
+cd angular-node-java-ai
 ```
 
-### ▶️ Frontend Angular
+### Frontend
 
 ```bash
 cd frontend-angular
 npm install
 npm start
-# http://localhost:4200
 ```
 
-### ▶️ Backend JavaScript
+http://localhost:4200
+
+### Backend JavaScript
 
 ```bash
 cd backend-javascript
 npm install
 npm start
-# http://localhost:3000
 ```
 
+http://localhost:3000
 
-### ▶️ Backend TypeScript
+### Backend TypeScript
 
 ```bash
 cd backend-typescript
 npm install
 npm start
-# http://localhost:3000
 ```
+
+http://localhost:3000
+
+### Backend Spring Boot
+
+```bash
+cd backend-springboot
+mvn spring-boot:run
+```
+
+http://localhost:8080
 
 ---
 
+## Docker
 
-## 🐳 Déploiement avec Docker
-
-### ▶️ Prérequis
-- Docker doit être installé sur votre machine : [Installation Docker](https://docs.docker.com/get-docker/)
-
-### ▶️ Lancer le frontend Angular via Docker
+### Frontend
 
 ```bash
 docker pull ganatan/frontend-angular
 docker run -d -p 4200:4200 ganatan/frontend-angular
-# http://localhost:4200
 ```
 
-### ▶️ Lancer le backend Javascript via Docker
+### Backend JavaScript
 
 ```bash
 docker pull ganatan/backend-javascript
 docker run -d -p 8080:8080 ganatan/backend-javascript
-# http://localhost:8080
 ```
 
-### ▶️ Lancer le backend Typescript via Docker
+### Backend TypeScript
 
 ```bash
 docker pull ganatan/backend-typescript
 docker run -d -p 8080:8080 ganatan/backend-typescript
-# http://localhost:8080
 ```
 
 ---
 
-## 👤 Author
+## Author
 
-- **Danny** – [www.ganatan.com](https://www.ganatan.com)
+Danny 
+
+🌐 https://www.ganatan.com
 
 ---
 
-## 📚 Documentation
+## Documentation
 
-- 🇫🇷 [Tutoriels en français](https://www.ganatan.com/tutorials)  
-- 🇬🇧 [Tutorials in English](https://www.ganatan.com/en/tutorials)
+🇫🇷 https://www.ganatan.com/tutorials
+
+🇬🇧 https://www.ganatan.com/en/tutorials
