@@ -1,4 +1,4 @@
-# Angular 20 Fullstack Starter
+# Angular 22 Fullstack Starter
 
 Angular 22 starter application with multiple backend implementations.
 
@@ -10,7 +10,7 @@ Angular 22 starter application with multiple backend implementations.
 
 | Project | Technology |
 |----------|------------|
-| frontend-angular | Angular 20 |
+| frontend-angular | Angular 22 |
 | backend-node       | Node.js + TypeScript |
 | backend-springboot | Java + Spring Boot |
 
