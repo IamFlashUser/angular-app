@@ -10,7 +10,7 @@ Angular 22 starter application with Node.js and Spring Boot backends.
 |----------|------------|
 | frontend-angular | Angular 22 |
 | backend-node | Node.js + TypeScript |
-| backend-springboot | Java 21 + Spring Boot |
+| backend-springboot | Java + Spring Boot    |
 
 ---
 
