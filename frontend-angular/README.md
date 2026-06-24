@@ -25,19 +25,6 @@ to create a **Web Application with Angular 22**
 </tr>
 </table>
 
-# [Angular Live Demo](#angular-live-demo)
-Here is a working Angular live demo :  https://angular.ganatan.com
-
-<p align="center">
-  <p align="center">
-    <a href="https://angular.ganatan.com/">
-      <img src="https://media.giphy.com/media/9BuBBLc7keCgRojp92/giphy.gif" alt="Angular 22 Example 
-      Application"/>
-    </a>
-  </p>
-</p>
-
-
 # [Angular Quick start](#angular-quick-start)
 
 ```bash
@@ -56,16 +43,6 @@ npm start
 ```
 in your browser go to [http://localhost:4200](http://localhost:4200) 
 
-
-# [Angular Tutorial](#angular-quick-start)
-
-Here is a step by step Tutorial :  https://www.ganatan.com/en/tutorials/getting-started-with-angular
-
-<p align="center">
-  <a href="https://www.ganatan.com/en/tutorials/getting-started-with-angular">
-    <img src="img/ganatan-angular-starter-github.png" alt="Demo example"/>
-  </a>
-</p>
 
 # [Angular Getting started](#angular-getting-started)
 
@@ -91,11 +68,3 @@ Here is a step by step Tutorial :  https://www.ganatan.com/en/tutorials/getting-
 
 # [Author](#author)
 * Author  : danny
-
-## [English Tutorials](#english-tutorials)
-- Installation - https://www.ganatan.com/en/tutorials/progressive-web-app-with-angular
-- step-by-step Tutorials - https://www.ganatan.com/tutorials/en
-
-## [Tutoriels en français](#french-tutorials)
-- Installation - https://www.ganatan.com/tutorials/progressive-web-app-avec-angular
-- Tutoriels Etape par étape - https://www.ganatan.com/tutorials
