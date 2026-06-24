@@ -1,4 +1,4 @@
-# Angular 22 Fullstack Starter
+# Angular 20 Fullstack Starter
 
 <img src="./ui/ganatan-about-github.png" align="right" width="140" height="140" alt="Ganatan">
 
@@ -12,10 +12,10 @@ Angular 22 starter application with multiple backend implementations.
 
 | Project | Technology |
 |----------|------------|
-| frontend-angular | Angular 22 |
-| backend-javascript | Node.js 22 + Express |
-| backend-typescript | Node.js 22 + TypeScript |
-| backend-springboot | Java 21 + Spring Boot |
+| frontend-angular | Angular 20 |
+| backend-javascript | Node.js + Express |
+| backend-typescript | Node.js + TypeScript |
+| backend-springboot | Java + Spring Boot |
 
 ---
 
