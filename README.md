@@ -1,14 +1,8 @@
 # Application Fullstack : Angular 20, Node.js et Java 21
 
-
-
 <img src="./ui/ganatan-about-github.png" align="right" width="140" height="140" alt="logo ganatan">
 
 ## 🚀 Objectifs du projet
-- ✅ Stack frontend / backend complète  
-- ✅ Compatibilité CI/CD et Docker  
-- ✅ Déploiement simple (Docker optionnel)  
-- ✅ Composants isolés et testables  
 ---
 
 **👉 Looking for the English version?** : [![English](./ui/version-en.png)](./README.en.md)
@@ -23,56 +17,6 @@
 | **Backend Spring Boot**           | Java 21 + Spring Boot — API REST simple et moderne            |
 
 ---
-
-## 🔧 Intégration Continue (CI)
-
-| Projet                         | Badge CI |
-|-------------------------------|----------|
-| Frontend Angular              | [![Frontend Angular CI](https://github.com/ganatan/angular-app/actions/workflows/frontend-angular.yml/badge.svg?branch=master)](https://github.com/ganatan/angular-app/actions/workflows/frontend-angular.yml) |
-| Backend JavaScript            | [![Backend JavaScript CI](https://github.com/ganatan/angular-app/actions/workflows/backend-javascript.yml/badge.svg?branch=master)](https://github.com/ganatan/angular-app/actions/workflows/backend-javascript.yml) |
-| Backend TypeScript            | [![Backend TypeScript CI](https://github.com/ganatan/angular-app/actions/workflows/backend-typescript.yml/badge.svg?branch=master)](https://github.com/ganatan/angular-app/actions/workflows/backend-typescript.yml) |
-| Backend Spring Boot           | [![Backend Spring Boot CI](https://github.com/ganatan/angular-app/actions/workflows/backend-springboot.yml/badge.svg?branch=master)](https://github.com/ganatan/angular-app/actions/workflows/backend-springboot.yml) |
-
----
-
-## 📦 Images Docker
-
-| Composant                     | Badge Docker |
-|------------------------------|---------------|
-| Backend JavaScript           | [![Docker Image Version - Backend JavaScript](https://img.shields.io/docker/v/ganatan/backend-javascript?label=Backend%20JavaScript%20Docker&logo=docker&sort=semver)](https://hub.docker.com/r/ganatan/backend-javascript) |
-| Backend TypeScript           | [![Docker Image Version - Backend TypeScript](https://img.shields.io/docker/v/ganatan/backend-typescript?label=Backend%20TypeScript%20Docker&logo=docker&sort=semver)](https://hub.docker.com/r/ganatan/backend-typescript) |
-| Backend Spring Boot          | [![Docker Image Version - Backend Spring Boot](https://img.shields.io/docker/v/ganatan/backend-springboot?label=Backend%20SpringBoot%20Docker&logo=docker&sort=semver)](https://hub.docker.com/r/ganatan/backend-springboot) |
-| Frontend Angular             | [![Docker Image Version - Frontend Angular](https://img.shields.io/docker/v/ganatan/frontend-angular?label=Frontend%20Angular%20Docker&logo=docker&sort=semver)](https://hub.docker.com/r/ganatan/frontend-angular) |
-
----
-
-## 📦 Stack technologique
-
-![Angular](https://img.shields.io/badge/angular-20-red)
-![Node](https://img.shields.io/badge/node-22.x-blue)
-![Java](https://img.shields.io/badge/java-21-brightgreen)
-![Docker](https://img.shields.io/badge/Docker-24.x-blue?logo=docker)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/ganatan/angular-app/blob/master/LICENSE)
-
----
-
-## 📚 Table des matières
-
-- [Intégration Continue (CI)](#-intégration-continue-ci)
-- [Images Docker](#-images-docker)
-- [Objectifs du projet](#-objectifs-du-projet)
-- [Stack technologique](#-stack-technologique)
-- [Démo en ligne](#-démo-en-ligne)
-- [Structure du projet](#-structure-du-projet)
-- [Configuration du frontend Angular](#-configuration-du-frontend-angular)
-- [Configuration des backends](#-configuration-des-backends)
-- [APIs exposées](#-apis-exposées)
-- [Démarrage rapide](#-démarrage-rapide)
-- [Déploiement avec Docker](#-déploiement-avec-docker)
-- [Author](#-author)
-- [Documentation](#-documentation)
-
-
 ---
 
 ## 🌐 Démo en ligne
