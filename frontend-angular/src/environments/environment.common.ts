@@ -1,4 +1,4 @@
-export const appVersion = '250905-1502';
+export const appVersion = '260624-1503';
 
 export const appInfo = {
   name: 'Ganatan',
@@ -12,8 +12,8 @@ export const appInfo = {
 
 export const applicationBase = {
   name: 'angular-starter',
-  angular: 'Angular 20.3.2',
+  angular: 'Angular 23.0.2',
   bootstrap: 'Bootstrap 5.3.8',
-  fontawesome: 'Font Awesome 7.0.1',
+  fontawesome: 'Font Awesome 7.2.0',
 };
 

@@ -1,48 +1,37 @@
 // @ts-check
-const eslint = require("@eslint/js");
-const tseslint = require("typescript-eslint");
-const angular = require("angular-eslint");
+const eslint = require('@eslint/js');
+const { defineConfig } = require('eslint/config');
+const tseslint = require('typescript-eslint');
+const angular = require('angular-eslint');
 
-module.exports = tseslint.config(
+module.exports = defineConfig([
   {
-    files: ["**/*.ts"],
+    files: ['**/*.ts'],
     extends: [
       eslint.configs.recommended,
-      ...tseslint.configs.recommended,
-      ...tseslint.configs.stylistic,
-      ...angular.configs.tsRecommended,
+      tseslint.configs.recommended,
+      tseslint.configs.stylistic,
+      angular.configs.tsRecommended,
     ],
     processor: angular.processInlineTemplates,
     rules: {
-      "@angular-eslint/directive-selector": [
-        "error",
+      '@angular-eslint/directive-selector': [
+        'error',
         {
-          type: "attribute",
-          prefix: "app",
-          style: "camelCase",
+          type: 'attribute',
+          prefix: 'app',
+          style: 'camelCase',
         },
       ],
-      "@angular-eslint/component-selector": [
-        "error",
+      '@angular-eslint/component-selector': [
+        'error',
         {
-          type: "element",
-          prefix: "app",
-          style: "kebab-case",
+          type: 'element',
+          prefix: 'app',
+          style: 'kebab-case',
         },
       ],
-      "@angular-eslint/component-class-suffix": [
-        "error",
-        {
-          suffixes: ["", "Component"]
-        }
-      ],
-      "@angular-eslint/prefer-inject": "off",
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
-      ],
-      "no-undefined": "off",
+      "no-undefined": "error",
       "no-var": "error",
       "prefer-const": "error",
       "func-names": "error",
@@ -53,11 +42,8 @@ module.exports = tseslint.config(
     },
   },
   {
-    files: ["**/*.html"],
-    extends: [
-      ...angular.configs.templateRecommended,
-      ...angular.configs.templateAccessibility,
-    ],
+    files: ['**/*.html'],
+    extends: [angular.configs.templateRecommended, angular.configs.templateAccessibility],
     rules: {},
-  }
-);
+  },
+]);

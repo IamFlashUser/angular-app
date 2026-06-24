@@ -48,7 +48,7 @@ export class NewsComponent implements OnInit {
     public router: Router,
     private itemsService: ItemsService,
     private fb: FormBuilder) {
-
+    
     this.formFilters = this.fb.group({
       dateType: [1],
       fromDate: [''],
@@ -90,11 +90,13 @@ export class NewsComponent implements OnInit {
   }
 
   getItems() {
+    console.log('00000000001:getItems');
     this.loaded = false;
     const url = environment.urlNews;
     this.itemsService.getItems(url)
       .subscribe(
         items => {
+          console.log('00000000001:getItems:' + JSON.stringify(items));
           this.items = items;
           this.loaded = true;
         }

@@ -18,6 +18,7 @@ export class ItemsService {
   constructor(private http: HttpClient) { }
 
   getItems(url: string): Observable<object> {
+    console.log('00000000001:' + url);
     return this.http.get(url, httpOptions);
   }
 
