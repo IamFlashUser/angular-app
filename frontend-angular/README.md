@@ -1,4 +1,4 @@
-# Angular 22.0.2 HttpClient
+# Angular 22.0.3 Started
 
 
 <table>
@@ -42,10 +42,10 @@ Here is a working Angular live demo :  https://angular.ganatan.com
 
 ```bash
 # download the example or clone the repo from github
-git clone https://github.com/ganatan/angular-httpclient.git
+git clone https://github.com/ganatan/angular-node-java.git
 
 # change directory
-cd angular-httpclient
+cd frontend-angular
 
 # install the repo with npm
 npm install
