@@ -50,7 +50,6 @@ frontend-angular/
 backend-javascript/
 backend-typescript/
 backend-springboot/
-ui/
 ```
 
 ---
